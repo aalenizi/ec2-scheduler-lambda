@@ -37,11 +37,11 @@ Ensure the Lambda function has the following policy attached:
     }
   ]
 }
-
+```
 This policy enables the function to describe, start, and stop instances.
 
-#Usage
+##Usage
 Once set up, the Lambda function will check the tagged EC2 instances and start or stop them based on the current day and time matching the Schedule tag.
 
-#Contributing
+##Contributing
 Feel free to fork the repository and submit pull requests to contribute to the development of this function.
