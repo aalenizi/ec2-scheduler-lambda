@@ -18,6 +18,9 @@ The `ec2-scheduler-lambda` AWS Lambda function is designed to automatically star
 3. **Deploy Lambda Function**: Upload the `lambda_function.py` as your Lambda function code.
 4. **EventBridge Rule**: Set up an Amazon EventBridge (formerly CloudWatch Events) rule to trigger the Lambda function every 5 minutes using the expression `rate(5 minutes)`.
 
+## Function Execution
+To ensure that the Lambda function starts and stops instances according to their schedules, set up a trigger for the Lambda function using Amazon EventBridge (formerly CloudWatch Events). Create a rule with a schedule expression to run the Lambda function periodically (e.g., every 5 minutes: rate(5 minutes)).
+
 ## Function Policy and Role
 
 Ensure the Lambda function has the following policy attached:
